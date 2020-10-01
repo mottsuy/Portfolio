@@ -22,10 +22,10 @@ const Anchor = styled(HashLink)`
 `;
 
 const StyledBox = styled(Box)`
-  display : ${(props) => props.type ? 'block' : 'none'};
+  display : ${(props) => props.isOpen ? 'block' : 'none'};
   position : fixed;
   height: 250px;
-  top: 71px;
+  top: 69px;
   left: 0px;
   z-index: 2;
   width: 100%;
@@ -35,7 +35,7 @@ const StyledBox = styled(Box)`
 export default () => {
   const { state } = useContext(AppContext);
   return (
-    <StyledBox bg="rgba(237, 231, 240, 1)" textAlign="center" type={state}>
+    <StyledBox bg="rgba(237, 231, 240, 1)" textAlign="center" isOpen={state}>
       <HeaderUl>
         <HeaderList>
           <Anchor to="/#about_me">

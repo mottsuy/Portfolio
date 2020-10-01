@@ -9,11 +9,11 @@ const Top = styled.span`
   height: 3px;
   margin: 0 auto;
   position: relative;
-  top: ${(props) => props.type ? '-13px' : 0};
+  top: ${(props) => props.isOpen? '-13px' : 0};
   left: 0;
   borderRadius: 2px;
   transition: all .4s;
-  transform: ${(props) => props.type ? 'translateY(20px) rotate(-45deg)' : ''};
+  transform: ${(props) => props.isOpen ? 'translateY(20px) rotate(-45deg)' : ''};
   boxSizing: border-box;
   display: block;
 `;
@@ -27,8 +27,7 @@ const Middle = styled.span`
   top: 4px;
   left: 0;
   borderRadius: 2px;
-  opacity: ${(props) => props.type && 0};
-  transform: 
+  opacity: ${(props) => props.isOpen && 0};
   boxSizing: border-box;
   display: block;
 `;
@@ -39,11 +38,11 @@ const Bottom = styled.span`
   height: 3px;
   margin: 0 auto;
   position: relative;
-  top:  ${(props) => props.type ? '21px' : '9px'};
+  top:  ${(props) => props.isOpen ? '21px' : '9px'};
   left: 0;
   borderRadius: 2px;
   transition: all .4s;
-  transform: ${(props) => props.type ? 'translateY(-20px) rotate(45deg)' : ''};
+  transform: ${(props) => props.isOpen ? 'translateY(-20px) rotate(45deg)' : ''};
   boxSizing: border-box;
   display: block;
 `;
@@ -64,9 +63,9 @@ export default () => {
         display: ['block', 'block', 'none'],
       }}
     >
-      <Top type={state} />
-      <Middle type={state} />
-      <Bottom type={state} />
+      <Top isOpen={state} />
+      <Middle isOpen={state} />
+      <Bottom isOpen={state} />
     </Box>
   );
 };

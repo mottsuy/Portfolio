@@ -17,6 +17,8 @@ import jquery from '../img/jquery.png';
 import python from '../img/python.png';
 import node from '../img/node.png';
 import docker from '../img/docker.png';
+import Go from '../img/go.png';
+import typescript from '../img/typescript.png'
 
 const IconText = styled(Box)`
   display: inline;
@@ -46,42 +48,54 @@ const skillItems = [
   },
   {
     id: 'skill05',
+    language: 'typescript',
+    star: 3.5,
+  },
+  {
+    id: 'skill06',
     language: 'jquery',
     star: 3,
   },
   {
-    id: 'skill06',
+    id: 'skill07',
     language: 'node',
     star: 2.5,
   },
   {
-    id: 'skill07',
+    id: 'skill08',
     language: 'sass',
     star: 2,
   },
   {
-    id: 'skill08',
+    id: 'skill09',
+    language: 'Go',
+    star: 2,
+  },
+  {
+    id: 'skill10',
     language: 'docker',
     star: 1.5,
   },
   {
-    id: 'skill09',
+    id: 'skill11',
     language: 'python',
     star: 0.5,
-  }
+  },
 ];
 
-const Icon = (type) => (
+const Icon = (lang) => (
   <>
-    { type === "html5" && <Image src={html5} height={['150px','200px','200px']} /> }
-    { type === "css3" && <Image src={css3} height={['150px','200px','200px']} />}
-    { type === "javascript" && <Image src={javascript} height={['150px','200px','200px']} />}
-    { type === "react" && <Image src={react}height={['150px','200px','200px']} />} 
-    { type === "sass" && <Image src={sass} height={['150px','200px','200px']} />}
-    { type === "jquery" && <Image src={jquery} height={['150px','200px','200px']} />}
-    { type === "python" && <Image src={python} height={['150px','200px','200px']} />}
-    { type === "node" && <Image src={node} height={['150px','200px','200px']} />}
-    { type === "docker" && <Image src={docker} height={['150px','200px','200px']} />}
+    { lang === "html5" && <Image src={html5} height={['150px','200px','200px']} /> }
+    { lang === "css3" && <Image src={css3} height={['150px','200px','200px']} />}
+    { lang === "javascript" && <Image src={javascript} height={['150px','200px','200px']} />}
+    { lang === "react" && <Image src={react}height={['150px','200px','200px']} />} 
+    { lang === "sass" && <Image src={sass} height={['150px','200px','200px']} />}
+    { lang === "jquery" && <Image src={jquery} height={['150px','200px','200px']} />}
+    { lang === "python" && <Image src={python} height={['150px','200px','200px']} />}
+    { lang === "node" && <Image src={node} height={['150px','200px','200px']} />}
+    { lang === "docker" && <Image src={docker} height={['150px','200px','200px']} />}
+    { lang === "Go" && <Image src={Go} height={['150px','200px','200px']} />}
+    { lang === "typescript" && <Image src={typescript} height={['150px','200px','200px']} />}
   </>
 );
 
@@ -89,11 +103,11 @@ const Content = (number) => {
   const stars =[];
   for(let i = 1; i <= 5; i++) {
     if(number - i >= 0) {
-    stars.push(<IconText as="p" fontSize={[3, 3, 5]}><FontAwesomeIcon icon={[ 'fas', 'star' ]} /></IconText>);
+    stars.push(<IconText key={i} as="p" fontSize={[3, 3, 5]}><FontAwesomeIcon icon={[ 'fas', 'star' ]} /></IconText>);
     } else if (number - i > -1) {
-      stars.push(<IconText as="p" fontSize={[3, 3, 5]}><FontAwesomeIcon icon={[ 'fas', 'star-half-alt' ]} /></IconText>);
+      stars.push(<IconText key={i} as="p" fontSize={[3, 3, 5]}><FontAwesomeIcon icon={[ 'fas', 'star-half-alt' ]} /></IconText>);
     } else {
-      stars.push(<IconText as="p" fontSize={[3, 3, 5]}><FontAwesomeIcon icon={[ 'far', 'star' ]} /></IconText>);
+      stars.push(<IconText key={i} as="p" fontSize={[3, 3, 5]}><FontAwesomeIcon icon={[ 'far', 'star' ]} /></IconText>);
     }
   }
   return (
