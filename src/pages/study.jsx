@@ -8,7 +8,7 @@ import {
 } from 'rebass';
 import styled from '@emotion/styled';
 import Layout from '../Layout';
-import Head from '../components/Head';
+import Head from '../components/template/Head';
 import Container from '../lib/Container';
 import mri from '../img/mri-2813911.jpg';
 import linear from '../img/linear.jpg';

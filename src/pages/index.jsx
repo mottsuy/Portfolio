@@ -2,10 +2,10 @@ import React from 'react';
 import {Box, Heading} from 'rebass';
 import Layout from '../Layout';
 import Container from '../lib/Container';
-import Head from '../components/Head';
-import About from '../components/About';
-import Skill from '../components/Skill';
-import Work from '../components/Work';
+import Head from '../components/template/Head';
+import About from '../components/template/About';
+import Skill from '../components/template/Skill';
+import Work from '../components/template/Work';
 
 
 const HeadingContent = () => (

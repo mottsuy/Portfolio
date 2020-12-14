@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { Box } from 'rebass';
-import AppContext from '../Context/AppContext';
+import AppContext from '../../Context/AppContext';
 
 const Top = styled.span`
   background-color: rgba(96, 0, 155, 0.5);

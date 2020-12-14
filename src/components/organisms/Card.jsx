@@ -4,7 +4,7 @@ import {
   Text,
   Image,
   Heading} from 'rebass';
-import profImage from '../img/8JZywRbNzLMxt2Q1593246887_1593246898.jpg';
+import profImage from '../../img/8JZywRbNzLMxt2Q1593246887_1593246898.jpg';
 
 
 export default () => (

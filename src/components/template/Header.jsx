@@ -2,8 +2,8 @@ import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import {Box, Text, Flex} from 'rebass';
 import styled from '@emotion/styled';
-import Humberger from './Humberger';
-import HeaderMenu from './HeaderMenu';
+import Humberger from '../organisms/Humberger';
+import HeaderMenu from '../organisms/HeaderMenu';
 
 const HeaderUl = styled.ul`
   list-style: none;

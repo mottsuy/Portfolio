@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import {Box, Text} from 'rebass';
 import { HashLink } from 'react-router-hash-link';
 import styled from '@emotion/styled';
-import AppContext from '../Context/AppContext';
+import AppContext from '../../Context/AppContext';
 
 const HeaderUl = styled.ul`
   list-style: none;

@@ -6,9 +6,10 @@ import {
   Image,
   Flex,
 } from 'rebass';
-import Panel from './Panel';
-import mri from '../img/mri.jpg';
-import portfolio from '../img/portfolio_top.png';
+import Panel from '../organisms/Panel';
+import mri from '../../img/mri.jpg';
+import portfolio from '../../img/portfolio_top.png';
+import fvi from '../../img/fvi.png';
 
 const workItems = [
   {
@@ -24,6 +25,13 @@ const workItems = [
     img: portfolio,
     content: "ポートフォリオ",
     path: '/'
+  },
+  {
+    id: "work03",
+    type: "link",
+    img: fvi,
+    content: "作成した企業HP",
+    path: "https://fvi.co.jp/",
   }
   
 ]
