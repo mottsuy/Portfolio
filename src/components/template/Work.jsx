@@ -37,7 +37,7 @@ const workItems = [
 ]
 
 const Img = (img) => (
-  <Image src={img} sx={{borderRadius:'13px 13px 0 0'}}/>
+  <Image src={img} sx={{borderRadius:'13px 13px 0 0', width:"100%"}}/>
 );
 
 const Content = (content) => (
